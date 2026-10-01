@@ -12,7 +12,9 @@ Agents SDK to:
    contract discussion.
 
 The project is currently implemented as a notebook rather than a command-line
-application or reusable Python package.
+application or reusable Python package. 
+
+costed me 8 cents for gh copilot and 20 cents OPENAI API calls, compared to 20$ and 28 cents for contract1.0 version:)
 
 ## Project structure
 
