@@ -2,7 +2,6 @@ bin/
 obj/
 .venv/
 .env
-uv.lock
 /output/
 *pdf
 *.txt

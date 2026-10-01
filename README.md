@@ -21,17 +21,17 @@ contract2.0/
 |-- .env                         # Local API key and model configuration
 |-- pyproject.toml               # Project metadata and Python dependencies
 |-- uv.lock                      # Reproducible dependency lock file
+|-- output/
+|   -- constraints.json     # Structured applicant requirements
+|   -- contract.json        # Structured facts extracted from the contract
+|   -- cv.json              # Structured CV profile
+|   -- constraints.md       # Contract-versus-requirements report
+|   -- matchmaker.md        # Contract-versus-CV report
 |-- src/
-|   |-- loader.ipynb             # Complete extraction and analysis workflow
-|   |-- constraints.txt          # Applicant's contract requirements
-|   |-- contract.pdf             # Employment contract used as input
-|   |-- cv.pdf                   # CV used as input
-|   `-- output/
-|       |-- constraints.json     # Structured applicant requirements
-|       |-- contract.json        # Structured facts extracted from the contract
-|       |-- cv.json              # Structured CV profile
-|       |-- constraints.md       # Contract-versus-requirements report
-|       `-- matchmaker.md        # Contract-versus-CV report
+|   -- loader.ipynb             # Complete extraction and analysis workflow
+|-- constraints.txt          # Applicant's contract requirements
+|-- contract.pdf             # Employment contract used as input
+|-- cv.pdf                   # CV used as input
 `-- .venv/                       # Local Python virtual environment
 ```
 
@@ -40,14 +40,14 @@ contract2.0/
 | File | Purpose |
 | --- | --- |
 | `src/loader.ipynb` | Defines the Pydantic data models, file tools, agents, prompts, and report-generation steps. |
-| `src/constraints.txt` | Human-readable requirements such as salary, contract duration, working hours, travel, vacation, and non-compete conditions. |
-| `src/contract.pdf` | Source contract read by the contract extraction agent. |
-| `src/cv.pdf` | Source CV read by the CV extraction agent. |
-| `src/output/constraints.json` | Requirements normalized into nested `Constraint_Element` records. |
-| `src/output/contract.json` | Contract sections, parties, summaries, facts, conditions, and supporting quotations. |
-| `src/output/cv.json` | CV summary, experience, education, projects, competencies, languages, and evidence. |
-| `src/output/matchmaker.md` | Applicant-oriented assessment of how well the contract matches the CV. |
-| `src/output/constraints.md` | Applicant-oriented assessment of how well the contract satisfies the stated requirements. |
+| `constraints.txt` | Human-readable requirements such as salary, contract duration, working hours, travel, vacation, and non-compete conditions. |
+| `contract.pdf` | Source contract read by the contract extraction agent. |
+| `cv.pdf` | Source CV read by the CV extraction agent. |
+| `/output/constraints.json` | Requirements normalized into nested `Constraint_Element` records. |
+| `/output/contract.json` | Contract sections, parties, summaries, facts, conditions, and supporting quotations. |
+| `/output/cv.json` | CV summary, experience, education, projects, competencies, languages, and evidence. |
+| `/output/matchmaker.md` | Applicant-oriented assessment of how well the contract matches the CV. |
+| `/output/constraints.md` | Applicant-oriented assessment of how well the contract satisfies the stated requirements. |
 
 ## How the workflow works
 
